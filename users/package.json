@@ -1,12 +1,11 @@
 {
-  "name": "order",
+  "name": "users",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node --watch index.js",
-    "migrate": "node-pg-migrate"
+    "start":"node --watch index.js"
   },
   "keywords": [],
   "author": "",

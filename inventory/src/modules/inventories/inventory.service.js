@@ -14,10 +14,11 @@ export const getAllInventoriesService = async()=>{
 
 
 export const updateInventoryService = async(inventoryId, data)=>{
-  const findInventory = await getInventoryById(inventoryId);
-  if(!findInventory){
+  const Inventory = await getInventoryById(inventoryId);
+  if(!Inventory){
     throw new Error(`Inventory with ID ${inventoryId} not found`);
   }
+  data.quantity = Inventory.quantity - data.quantity;
   const updatedInventory = await updateInventory(inventoryId, data);
   return updatedInventory;
 }
